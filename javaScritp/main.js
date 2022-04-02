@@ -11,6 +11,7 @@ const barraJava = document.querySelector(".progress-bar-java");
 const barraLectura = document.querySelector(".lectura");
 const barraHabla = document.querySelector(".habla");
 const barraEscritura = document.querySelector(".escritura");
+const noInsta = document.querySelector(".no-insta");
 
 //Animación de las barras de skills
 const skillsBarAnim = () => {
@@ -48,6 +49,8 @@ const navBarAnim = () => {
     navBarDown.style.backgroundColor = "var(--oscuro-transparente)";
   }
 };
+const noTengoInstagram = () => alert("¡¡NO TENGO INSTAGRAM!!");
 
 addEventListener("scroll", skillsBarAnim);
 addEventListener("scroll", navBarAnim);
+noInsta.addEventListener("click", noTengoInstagram);
