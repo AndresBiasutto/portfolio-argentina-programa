@@ -152,7 +152,40 @@ width: 100%;
     font-family: var(--fontH);
 
 }
+.menu-ham{
+    display: none;
+}
 
+/*MQ nav bars*/
+
+@media (max-width: 576px) {
+    .menu-ham{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--naranja-obscuro);
+    }
+    .menu{
+        height: 3rem;
+        display: flex;
+        justify-content: right;
+        padding: 10%;
+        background-color: var(--oscuro);
+    }
+    .menu__barra-botones{
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--oscuro);
+        height: 30rem;
+        width: 100%;
+        margin-top: 25rem;
+    }
+    .menu-ham-toogle{
+        display: flex;
+    }
+  }
 
 
 /*----------HERO----------*/
@@ -236,17 +269,13 @@ position: relative;
     font-size: 3rem;
 }
 
-.hero__p{
-    position: absolute;
-    top: 54%;
-    left: 73%;
-    transform: translate(-50%, -50%);
-    font-style: italic;
-    box-shadow:  .3rem .3rem  0 var(--naranja-obscuro);
-    color: var(--naranja-obscuro);
-}
 
-
+/*MQ hero*/
+@media (max-width: 576px) {
+    .titulo-hero-name{
+        font-size: 6rem;
+    }
+  }
 
 /*----------ACERDA DE----------*/
 
@@ -298,8 +327,22 @@ position: relative;
     color: var(--primario);
     font-weight: 500;
 }
-
-
+/*MQ About*/
+@media (max-width: 576px) {
+    .about{
+        height: 100%;
+    }
+    .about__background{
+        flex-direction: column-reverse;
+    }
+    .retrato{
+        width: 100%;
+    }
+    .about__background__text{
+        margin: 0 1rem;
+        
+    }
+  }
 
 
 /*----------EXPERIENCIA----------*/
@@ -379,6 +422,7 @@ position: relative;
 
 
 
+
 /*----------EDUCACION----------*/
 
 
@@ -431,6 +475,19 @@ position: relative;
     width: 20rem;
 }
 
+/*MQ educacion y experiencia*/
+
+@media (max-width: 576px) {
+    .experiencia__background__tabla{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 1rem;
+    }
+    .experiencia__background__tabla__info{
+        margin: 0 1rem;
+    }
+  }
 
 
 /*----------SKILLS----------*/
@@ -590,6 +647,17 @@ position: relative;
     100%{width: 80%;}
 }
 
+
+/*media querys*/
+@media (max-width: 576px) {
+    .skills{
+        height: 100%;
+    }
+    .skills__caja__cards{
+        display: flex;
+        flex-wrap: wrap;
+    }
+  }
 /*----------PORTFOLIO----------*/
 
 .portfolio{
@@ -623,7 +691,7 @@ position: relative;
     background-image: url("../assets/img/port-3.jpg");
     background-size: cover;
     background-position-x: right;
-    
+    cursor: pointer;
 }
 .proyecto3{
     grid-area: tre;
@@ -635,7 +703,7 @@ position: relative;
     background-image: url("../assets/img/front-port-1.jpg");
     background-size: cover;
     background-position-x: right;
-
+    cursor: pointer;
 }
 .proyecto5{
     grid-area: cin;
@@ -657,7 +725,7 @@ position: relative;
     background-image: url("../assets/img/front-port-2.jpg");
     background-size: cover;
     background-position-x: center;
-
+    cursor: pointer;
 }
 .proyecto9{
     grid-area: nue;
@@ -670,6 +738,7 @@ position: relative;
     background-color: var(--naranja-obscuro);
     background-blend-mode: darken;
     transition: .5s all ease-in-out;
+
 }
 .grid__box__btn:hover{
     background-color: transparent;
@@ -677,6 +746,24 @@ position: relative;
     transform: translate(-1rem, -1rem);
     
 }
+@media (max-width: 576px) {
+    .portfolio__grid{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .grid__box{
+        border: none;
+        height: 40rem;
+    }
+    .proyecto1 .proyecto3 .proyecto5 .proyecto7 .proyecto9{
+        display: none;
+    }
+    .grid__box__btn{
+        height: 20rem;
+    }
+}
+
 
 /*----------FOOTER----------*/
 

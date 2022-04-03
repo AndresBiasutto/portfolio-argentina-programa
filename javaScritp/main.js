@@ -12,6 +12,9 @@ const barraLectura = document.querySelector(".lectura");
 const barraHabla = document.querySelector(".habla");
 const barraEscritura = document.querySelector(".escritura");
 const noInsta = document.querySelector(".no-insta");
+const menuHam = document.querySelector(".menu-ham");
+const menuBotones = document.querySelector(".menu__barra-botones");
+const menuToogle = document.querySelector(".menu-ham-toogle");
 
 //Animación de las barras de skills
 const skillsBarAnim = () => {
@@ -49,8 +52,19 @@ const navBarAnim = () => {
     navBarDown.style.backgroundColor = "var(--oscuro-transparente)";
   }
 };
+//es que no tengo insta :(
 const noTengoInstagram = () => alert("¡¡NO TENGO INSTAGRAM!!");
+
+//boton menu celular
+function menuCelular() {
+  menuBotones.classList.toggle("menu-ham-toogle");
+
+  // estado
+  //   ? (menuBotones.style.display = "flex")
+  //   : (menuBotones.style.display = "none");
+}
 
 addEventListener("scroll", skillsBarAnim);
 addEventListener("scroll", navBarAnim);
 noInsta.addEventListener("click", noTengoInstagram);
+menuHam.addEventListener("click", menuCelular);
