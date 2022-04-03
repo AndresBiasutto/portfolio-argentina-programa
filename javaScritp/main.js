@@ -29,7 +29,7 @@ const skillsBarAnim = () => {
     barraEscritura,
   ];
 
-  if (distanciaHastaSkills < 10) {
+  if (distanciaHastaSkills < 100) {
     console.log("soy menos que 0");
     for (let i = 0; i < barras.length; i++) {
       barras[i].style.animationPlayState = "running";
