@@ -148,12 +148,27 @@ width: 100%;
     top: 80vh;
     left: 50vw;
     background-color: transparent;
-    border: .4rem solid var(--naranja-obscuro);
-    color: var(--naranja-obscuro);
+    border: .4rem solid transparent;
+    color: transparent;
     border-radius: 3rem;
     padding: .5rem 7rem;
     cursor: pointer;
     transition: .5s  all ease;
+    animation-delay: 3s;
+    animation-name: entrada-btn;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+
+}
+@keyframes entrada-btn {
+    0%{
+        filter: blur(5px);
+    }
+    100%{
+        filter: blur(0);
+        border: .4rem solid var(--naranja-obscuro);
+        color: var(--naranja-obscuro);
+    }
 }
 
 .btn_cv:hover{
@@ -228,26 +243,29 @@ position: relative;
 .svg-sky{
     position: absolute;
     height: 80%;
-    transform: translate(-50%);
-    top: 15rem;
-    left: 40%;
+    transform: translate(-50%, -50%);
+    top: 10%;
+    left: 26%;
     filter: blur(5px);
+    transform: scale(.5, .5);
+    pointer-events: none;
     animation-name: sky;
-    animation-duration: 40s;
+    animation-duration: 30s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+    user-select: none;
 }
 
 @keyframes sky {
     0%{
-        left: 40%;
-        filter: blur(5px);
+        transform: scale(.5, .5);
+
     }
     50%{
-        left: 60%;
-        top: 12rem;
         filter: blur(0);
-        transform: scale(1.1rem, 1.1rem)
+        
+        transform: scale(1.5, 1.5) rotate(120deg);
+
     }
 }
 
@@ -265,9 +283,13 @@ position: relative;
 }
 .titulo-hero-name{
     text-align: center;
+    pointer-events: none;
+    user-select: none;
 }
 .titulo-hero-sub{
     text-align: center;
+    pointer-events: none;
+    user-select: none;
 }
 
 @keyframes titulo {
@@ -303,6 +325,32 @@ position: relative;
         font-size: 6rem;
     }
   }
+
+.flecha-hero{
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: rotate(180deg);
+    font-size: 4rem;
+    color: transparent;
+    animation-name: flecha-seguir;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-delay: 7s;
+}
+@keyframes flecha-seguir {
+    0%{
+        bottom: 8%;
+        color: transparent;
+        filter: blur(2px);
+    }
+    100%{
+        color: var(--naranja-claro);
+        bottom: 6%;
+        filter: blur(0);
+    }
+}
 
 /*----------ACERDA DE----------*/
 
